@@ -22,9 +22,23 @@ class Connector
         R::setAutoResolve(TRUE);// Recommended as of version 4.2
     }
 
+    /**
+     * @param $table
+     * @return array
+     */
+    public function GrabAll($table)
+    {
+        return R::findAll($table);
+    }
+
+    /**
+     * connector destructor
+     */
     public function __destruct()
     {
         R::close();
     }
+
+
 }
 

@@ -4,6 +4,7 @@
 A huge project on a custom website for thedgl.org
 
 ## Changelog
+- (**Version 0.0.6** (Slate Schoolbook Perch) Simple CRUD operations added)
 - (**Version 0.0.5** (Slate Schoolbook Crawdad) Added hashes for passwords started working on creating user database)
 - (**Version 0.0.4** (Slate Schoolbook Lobster) Started adding databasing (Installed MariaDB on the test box))
 - (**Version 0.0.3.1** (Slate Schoolbook Shrimp Crab) Last update before bed)

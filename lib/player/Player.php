@@ -7,7 +7,7 @@
  */
 class Player
 {
-    private $userName, $userPass, $userEmail, $steamAcc, $isBanned, $rank, $wins, $losses, $gamesPlayed, $playerName, $hasUploadedDemo, $hasVacBan;
+    private $userName, $userPass, $userEmail, $steamAcc, $rank, $wins, $losses, $gamesPlayed, $playerName, $hasVacBan;
     private $CAN_TALK = false;
 
     /**
@@ -96,23 +96,6 @@ class Player
     }
 
     /**
-     * @return boolean
-     */
-    public function getIsBanned()
-    {
-        return $this->isBanned;
-    }
-
-    /**
-     * @param boolean $isBanned
-     * @return void
-     */
-    public function setIsBanned($isBanned)
-    {
-        $this->isBanned = $isBanned;
-    }
-
-    /**
      * @return string
      */
     public function getRank()
@@ -186,23 +169,6 @@ class Player
     public function setPlayerName($playerName)
     {
         $this->playerName = $playerName;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getHasUploadedDemo()
-    {
-        return $this->hasUploadedDemo;
-    }
-
-    /**
-     * @param boolean $hasUploadedDemo
-     * @return void
-     */
-    public function setHasUploadedDemo($hasUploadedDemo)
-    {
-        $this->hasUploadedDemo = $hasUploadedDemo;
     }
 
     /**
