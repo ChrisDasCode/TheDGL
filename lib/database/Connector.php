@@ -19,6 +19,7 @@ class Connector
         // R::setup( 'pgsql:host=localhost;dbname=mydatabase','user', 'password' );//for PostgreSQL Db's
         // R::setup( 'sqlite:/tmp/dbfile.db' ); //for SQLite Db's
         // R::setup('cubrid:host=localhost;port=30000;dbname=mydatabase','user','password');//for CUBRID Db's
+        R::setAutoResolve(TRUE);// Recommended as of version 4.2
     }
 
     public function __destruct()
