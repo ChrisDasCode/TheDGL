@@ -4,7 +4,7 @@
  * @Author: DasCode (dascodegit@gmail.com)
  * @Date: 9/27/2016
  */
-require '../Player/Player.php'; //Go back a directory then go to /Player/ ;)
+require '../player/Player.php'; //Go back a directory then go to /player/ ;)
 
 class Team
 {

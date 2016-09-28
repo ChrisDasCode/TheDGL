@@ -8,5 +8,13 @@ require 'Player.php';
 
 class Officer extends Player
 {
+    /**
+     * Officer constructor.
+     */
+    public function __construct()
+    {
+        $this->setCanTalk();
+    }
+
 
 }

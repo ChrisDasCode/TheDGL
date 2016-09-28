@@ -113,5 +113,14 @@ class Player
         return $this->CAN_TALK;
     }
 
+    /**
+     * @param boolean $CAN_TALK
+     */
+    public function setCanTalk()
+    {
+        $this->CAN_TALK = true;
+    }
+
+
 
 }
