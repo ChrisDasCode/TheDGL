@@ -13,6 +13,7 @@ class Officer extends Player
      */
     public function __construct()
     {
+        parent::__construct();
         $this->setCanTalk();
         $this->setRank("Officer");
     }
