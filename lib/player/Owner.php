@@ -8,5 +8,10 @@ require 'Admin.php';
 
 class Owner extends Admin
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setRank("Owner");
+    }
 
 }

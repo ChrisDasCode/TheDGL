@@ -8,5 +8,9 @@ require 'Captain.php';
 
 class Mod extends Captain
 {
-
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setRank("Mod");
+    }
 }

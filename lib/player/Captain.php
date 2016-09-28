@@ -11,6 +11,7 @@ class Captain extends Officer
     public function __construct()
     {
         parent::__construct();
+        $this->setRank("Captain");
     }
 
 }

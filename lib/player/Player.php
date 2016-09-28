@@ -11,7 +11,24 @@ class Player
     private $CAN_TALK = false;
 
     /**
-     * @return mixed
+     * Player constructor.
+     */
+    public function __construct()
+    {
+        $this->setRank("Player");
+    }
+
+    /**
+     * @param string $rank
+     * @return void
+     */
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+    }
+
+    /**
+     * @return string
      */
     public function getUserName()
     {
@@ -19,17 +36,16 @@ class Player
     }
 
     /**
-     * @param mixed $userName
-     * @return Player
+     * @param string $userName
+     * @return void
      */
     public function setUserName($userName)
     {
         $this->userName = $userName;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getUserPass()
     {
@@ -37,17 +53,16 @@ class Player
     }
 
     /**
-     * @param mixed $userPass
-     * @return Player
+     * @param string $userPass
+     * @return void
      */
     public function setUserPass($userPass)
     {
         $this->userPass = $userPass;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getUserEmail()
     {
@@ -55,17 +70,16 @@ class Player
     }
 
     /**
-     * @param mixed $userEmail
-     * @return Player
+     * @param string $userEmail
+     * @return void
      */
     public function setUserEmail($userEmail)
     {
         $this->userEmail = $userEmail;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getSteamAcc()
     {
@@ -73,17 +87,16 @@ class Player
     }
 
     /**
-     * @param mixed $steamAcc
-     * @return Player
+     * @param string $steamAcc
+     * @return void
      */
     public function setSteamAcc($steamAcc)
     {
         $this->steamAcc = $steamAcc;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return boolean
      */
     public function getIsBanned()
     {
@@ -91,17 +104,16 @@ class Player
     }
 
     /**
-     * @param mixed $isBanned
-     * @return Player
+     * @param boolean $isBanned
+     * @return void
      */
     public function setIsBanned($isBanned)
     {
         $this->isBanned = $isBanned;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getRank()
     {
@@ -109,17 +121,7 @@ class Player
     }
 
     /**
-     * @param mixed $rank
-     * @return Player
-     */
-    public function setRank($rank)
-    {
-        $this->rank = $rank;
-        return $this;
-    }
-
-    /**
-     * @return mixed
+     * @return int
      */
     public function getWins()
     {
@@ -127,17 +129,16 @@ class Player
     }
 
     /**
-     * @param mixed $wins
-     * @return Player
+     * @param int $wins
+     * @return void
      */
     public function setWins($wins)
     {
         $this->wins = $wins;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getLosses()
     {
@@ -145,17 +146,16 @@ class Player
     }
 
     /**
-     * @param mixed $losses
-     * @return Player
+     * @param int $losses
+     * @return void
      */
     public function setLosses($losses)
     {
         $this->losses = $losses;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getGamesPlayed()
     {
@@ -163,17 +163,16 @@ class Player
     }
 
     /**
-     * @param mixed $gamesPlayed
-     * @return Player
+     * @param int $gamesPlayed
+     * @return void
      */
     public function setGamesPlayed($gamesPlayed)
     {
         $this->gamesPlayed = $gamesPlayed;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getPlayerName()
     {
@@ -181,17 +180,16 @@ class Player
     }
 
     /**
-     * @param mixed $playerName
-     * @return Player
+     * @param string $playerName
+     * @return void
      */
     public function setPlayerName($playerName)
     {
         $this->playerName = $playerName;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return boolean
      */
     public function getHasUploadedDemo()
     {
@@ -199,17 +197,16 @@ class Player
     }
 
     /**
-     * @param mixed $hasUploadedDemo
-     * @return Player
+     * @param boolean $hasUploadedDemo
+     * @return void
      */
     public function setHasUploadedDemo($hasUploadedDemo)
     {
         $this->hasUploadedDemo = $hasUploadedDemo;
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return boolean
      */
     public function getHasVacBan()
     {
@@ -217,13 +214,12 @@ class Player
     }
 
     /**
-     * @param mixed $hasVacBan
-     * @return Player
+     * @param boolean $hasVacBan
+     * @return void
      */
     public function setHasVacBan($hasVacBan)
     {
         $this->hasVacBan = $hasVacBan;
-        return $this;
     }
 
     /**
@@ -232,6 +228,14 @@ class Player
     public function canTalk()
     {
         return $this->CAN_TALK;
+    }
+
+    /**
+     * @return void
+     */
+    public function setCanTalk()
+    {
+        $this->CAN_TALK = true;
     }
 
 

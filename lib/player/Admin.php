@@ -8,5 +8,9 @@ require 'Mod.php';
 
 class Admin extends Mod
 {
-
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setRank("Admin");
+    }
 }
