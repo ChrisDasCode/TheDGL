@@ -1,25 +1,27 @@
 <?php
+namespace lib\player;
+
 /**
  * @Project: DGL
  * @Author: DasCode (dascodegit@gmail.com)
  * @Date: 9/27/2016
  */
-require '../database/Connector.php'; //Lets me use the amazing RedBeanPHP ORM
+include('../database/Connector.php'); //Lets me use the amazing RedBeanPHP ORM
 require '../utils/Security.php';
 require '../utils/Time.php';
 require 'Owner.php'; //Get's all Player type classes with one easy import
+//require 'rb.php';
 
 class PlayerController
 {
     private $playerList = array();
-    private $storageUser;
-    private $c;
+
     /**
      * PlayerController constructor.
      */
     public function __construct()
     {
-        $this->c = new Connector();
+        R::setup();
     }
 
     /**
@@ -35,20 +37,20 @@ class PlayerController
     {
         $t = new Time();
         $timeNow = $t->timeNow();
-        $this->storageUser = R::dispense("users");
-        $this->storageUser->userName = htmlspecialchars($userName);
-        $this->storageUser->userPassword = hashPass(htmlspecialchars($userName), htmlspecialchars($userPassword), $timeNow);
-        $this->storageUser->userEmail = htmlspecialchars($userEmail);
-        $this->storageUser->steamAcc = htmlspecialchars($steamAcc);
-        $this->storageUser->playerName = htmlspecialchars($name);
-        $this->storageUser->Rank = htmlspecialchars($rank);
-        $this->storageUser->isBanned = false;
-        $this->storageUser->isVacBanned = false; // TODO: Add the ability to look this up based on the steamAcc
-        $this->storageUser->gamesPlayed = 0;
-        $this->storageUser->wins = 0;
-        $this->storageUser->losses = 0;
-        $this->storageUser->registerd = $timeNow;
-        $userID = R::store($this->storageUser);
+        $storageUser = R::dispense("users");
+        $storageUser->userName = htmlspecialchars($userName);
+        $storageUser->userPassword = hashPass(htmlspecialchars($userName), htmlspecialchars($userPassword), $timeNow);
+        $storageUser->userEmail = htmlspecialchars($userEmail);
+        $storageUser->steamAcc = htmlspecialchars($steamAcc);
+        $storageUser->playerName = htmlspecialchars($name);
+        $storageUser->Rank = htmlspecialchars($rank);
+        $storageUser->isBanned = false;
+        $storageUser->isVacBanned = false; // TODO: Add the ability to look this up based on the steamAcc
+        $storageUser->gamesPlayed = 0;
+        $storageUser->wins = 0;
+        $storageUser->losses = 0;
+        $storageUser->registerd = $timeNow;
+        $userID = R::store($storageUser);
         return $userID;
     }
 
@@ -68,7 +70,8 @@ class PlayerController
      */
     public function GetID($userName)
     {
-        $users = $this->c->GrabAll("users");
+        $c = new Connector();
+        $users = $c->GrabAll("users");
         for ($i = 0; $i < count($users); $i++) {
             if ($users['userName'][$i] == htmlspecialchars($userName)) {
                 return $i;
@@ -82,8 +85,9 @@ class PlayerController
      */
     public function MakeObjects()
     {
+        $c = new Connector();
         $this->playerList = array();
-        $users = $this->c->GrabAll("users");
+        $users = $c->GrabAll("users");
         for ($i = 0; $i < count($users); $i++) {
             switch ($users['Rank'][$i]) {
                 case "Owner":

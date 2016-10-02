@@ -1,5 +1,5 @@
 <?php
-
+namespace lib\utils;
 /**
  * @Project: DGL
  * @Author: DasCode (dascodegit@gmail.com)
@@ -16,6 +16,12 @@ class Time
         date_default_timezone_set("US/Eastern");
     }
 
+    public static function stimeNow()
+    {
+        date_default_timezone_set("US/Eastern");
+        return date("Y-m-d H:i:s");
+    }
+
     /**
      * @return false|string
      */
@@ -23,4 +29,5 @@ class Time
     {
         return date("Y-m-d H:i:s");
     }
+
 }

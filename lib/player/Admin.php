@@ -1,4 +1,5 @@
 <?php
+namespace lib\player;
 /**
  * @Project: DGL
  * @Author: DasCode (dascodegit@gmail.com)

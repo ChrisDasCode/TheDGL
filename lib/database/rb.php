@@ -31,7 +31,7 @@ namespace RedBeanPHP {
          * @return void
          */
         public function log();
-    }
+}
 }
 
 namespace RedBeanPHP\Logger {
@@ -164,7 +164,7 @@ namespace RedBeanPHP\Logger {
             }
             return $found;
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Logger\RDefault {
@@ -376,7 +376,7 @@ namespace RedBeanPHP\Logger\RDefault {
             $this->strLen = max(0, $len);
             return $this;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -540,7 +540,7 @@ namespace RedBeanPHP {
          * @return integer
          */
         public function getQueryCount();
-    }
+}
 }
 
 namespace RedBeanPHP\Driver {
@@ -1162,7 +1162,7 @@ namespace RedBeanPHP\Driver {
         {
             return $this->max;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -3051,7 +3051,7 @@ namespace RedBeanPHP {
         {
             return $this->export();
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -3125,7 +3125,7 @@ namespace RedBeanPHP {
                 $observer->onEvent($eventname, $info);
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -3160,7 +3160,7 @@ namespace RedBeanPHP {
          * @return void
          */
         public function onEvent($eventname, $bean);
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -3349,7 +3349,7 @@ namespace RedBeanPHP {
          * @return void
          */
         public function close();
-    }
+}
 }
 
 namespace RedBeanPHP\Adapter {
@@ -3579,7 +3579,7 @@ namespace RedBeanPHP\Adapter {
         {
             $this->db->close();
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -3615,7 +3615,7 @@ namespace RedBeanPHP {
          * @return void
          */
         public function close();
-    }
+}
 }
 
 namespace RedBeanPHP\Cursor {
@@ -3677,7 +3677,7 @@ namespace RedBeanPHP\Cursor {
         {
             $this->res->closeCursor();
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Cursor {
@@ -3715,7 +3715,7 @@ namespace RedBeanPHP\Cursor {
         {
             return NULL;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -3804,7 +3804,7 @@ namespace RedBeanPHP {
         {
             $this->cursor->close();
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -4298,7 +4298,7 @@ namespace RedBeanPHP {
          * @return string|NULL
          */
         public function inferFetchType($type, $property);
-    }
+}
 }
 
 namespace RedBeanPHP\QueryWriter {
@@ -5481,7 +5481,7 @@ namespace RedBeanPHP\QueryWriter {
                 return FALSE;
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP\QueryWriter {
@@ -5855,7 +5855,7 @@ namespace RedBeanPHP\QueryWriter {
             }
             return $keyInfoList;
         }
-    }
+}
 }
 
 namespace RedBeanPHP\QueryWriter {
@@ -6291,7 +6291,7 @@ namespace RedBeanPHP\QueryWriter {
 
             $this->adapter->exec('PRAGMA foreign_keys = 1 ');
         }
-    }
+}
 }
 
 namespace RedBeanPHP\QueryWriter {
@@ -6676,7 +6676,7 @@ namespace RedBeanPHP\QueryWriter {
             }
             return $keyInfoList;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -6696,7 +6696,7 @@ namespace RedBeanPHP {
      */
     class RedException extends \Exception
     {
-    }
+}
 }
 
 namespace RedBeanPHP\RedException {
@@ -6756,7 +6756,7 @@ namespace RedBeanPHP\RedException {
         {
             $this->sqlState = $sqlState;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -7376,7 +7376,7 @@ namespace RedBeanPHP {
                 $this->store($residue);
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Repository {
@@ -7689,7 +7689,7 @@ namespace RedBeanPHP\Repository {
                 throw $exception;
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Repository {
@@ -7885,7 +7885,7 @@ namespace RedBeanPHP\Repository {
                 }
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -8418,7 +8418,7 @@ namespace RedBeanPHP {
 
             AQueryWriter::setSQLFilters(self::$sqlFilters, (!$this->isFrozen));
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -8517,7 +8517,7 @@ namespace RedBeanPHP {
         {
             return $this->adapter;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -8903,7 +8903,7 @@ namespace RedBeanPHP {
             }
             return $beans;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -9242,7 +9242,7 @@ namespace RedBeanPHP {
                 return array();
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -9327,7 +9327,7 @@ namespace RedBeanPHP {
          * @return SimpleModel|CustomModel|NULL
          */
         public function getModelForBean(OODBBean $bean);
-    }
+}
 }
 
 namespace RedBeanPHP\BeanHelper {
@@ -9441,7 +9441,7 @@ namespace RedBeanPHP\BeanHelper {
         {
             return Facade::getExtractedToolbox();
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -9552,7 +9552,7 @@ namespace RedBeanPHP {
         {
             return $this->bean;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -9619,7 +9619,7 @@ namespace RedBeanPHP {
                 $observable->addEventListener($eventID, $this);
             }
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -9880,7 +9880,7 @@ namespace RedBeanPHP {
 
             return $this->redbean->convertToBeans($beanType, $records);
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -10059,7 +10059,7 @@ namespace RedBeanPHP {
 
             return $labelBeans;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
@@ -12406,7 +12406,7 @@ namespace RedBeanPHP {
         {
             return isset($this->columns[$target][$type . '_id']);
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Util {
@@ -12461,7 +12461,7 @@ namespace RedBeanPHP\Util {
             }
             return $result;
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Util {
@@ -12581,7 +12581,7 @@ namespace RedBeanPHP\Util {
 
             return $beanOrBeans;
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Util {
@@ -12641,7 +12641,7 @@ namespace RedBeanPHP\Util {
 
             return $array;
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Util {
@@ -12697,7 +12697,7 @@ namespace RedBeanPHP\Util {
 
             return $types;
         }
-    }
+}
 }
 
 namespace RedBeanPHP\Util {
@@ -12785,7 +12785,7 @@ namespace RedBeanPHP\Util {
             }
             return $result;
         }
-    }
+}
 }
 
 namespace RedBeanPHP {
