@@ -2,7 +2,7 @@
 
 
 A huge project on a custom torment bracket for multiple games with a multitude of clans   website for thedgl.org
-What it should like when all said and done. 
+[What it should like when all said and done.](http://imgur.com/a/qtPSV)
 ## Changelog
 - (**Version 0.0.6** (Slate Schoolbook Perch) Simple CRUD operations added)
 - (**Version 0.0.5** (Slate Schoolbook Crawdad) Added hashes for passwords started working on creating user database)
